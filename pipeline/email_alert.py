@@ -1,11 +1,14 @@
 import smtplib
 import time
 from email.message import EmailMessage
+from dotenv import load_dotenv
+import os
 
-# Gmail config
-GMAIL_USER = "upi.alert.bot@gmail.com"
-APP_PASSWORD = "aicx pxgq gxin kodn"  # Replace with secure app password
-TO_EMAIL = ["minitchitroda@gmail.com", "yugrchitroda03@gmail.com","nishaparchande14@gmail.com"]  # Receiver
+load_dotenv()
+
+GMAIL_USER = os.getenv("GMAIL_USER") #SENDER's MAIL
+APP_PASSWORD = os.getenv("APP_PASSWORD")
+TO_EMAIL = os.getenv("TO_EMAILS").split(",") #RECIEVER's MAIL
 
 
 def send_fraud_email(row):

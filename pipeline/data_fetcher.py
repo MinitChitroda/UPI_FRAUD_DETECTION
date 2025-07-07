@@ -5,11 +5,15 @@ import joblib
 import logging
 from sqlalchemy import create_engine, text
 from email_alert import send_fraud_email
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # -------------------- Configuration --------------------
 API_URL = "https://upi-fraud-api-server.onrender.com/live-transactions"
 MODEL_PATH = "../model/lgb_fraud_model.pkl"   
-DATABASE_URI = "postgresql://postgres:Minit%402005@localhost:5432/fraud_db"
+DATABASE_URI = os.getenv("DATABASE_URI")
 TABLE_NAME = "fraud_predictions"
 
 # -------------------- Logging Setup --------------------
