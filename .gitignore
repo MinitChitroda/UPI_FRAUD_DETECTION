@@ -1,0 +1,39 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+.env/
+venv/
+.env
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ignore large datasets if needed
+*.csv
+*.xlsx
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore tests/output
+outputs/
+checkpoints/
+*.tmp
+
+# Ignore environment variables or secrets
+.env
+
+# DO NOT ignore the model
+# (so REMOVE this line if it exists:)
+# *.pkl
