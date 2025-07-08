@@ -33,7 +33,3 @@ checkpoints/
 
 # Ignore environment variables or secrets
 .env
-
-# DO NOT ignore the model
-# (so REMOVE this line if it exists:)
-# *.pkl
