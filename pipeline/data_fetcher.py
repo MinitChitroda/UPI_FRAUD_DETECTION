@@ -5,7 +5,7 @@ import joblib
 import logging
 from fastapi import FastAPI
 from sqlalchemy import create_engine, text
-from email_alert import send_fraud_email
+from pipeline.email_alert import send_fraud_email
 from dotenv import load_dotenv
 import os
 
