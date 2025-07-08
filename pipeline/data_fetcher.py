@@ -12,7 +12,7 @@ load_dotenv()
 
 # -------------------- Configuration --------------------
 API_URL = "https://upi-fraud-api-server.onrender.com/live-transactions"
-MODEL_PATH = "../model/lgb_fraud_model.pkl"   
+MODEL_PATH = "model/lgb_fraud_model.pkl"   
 DATABASE_URI = os.getenv("DATABASE_URI")
 TABLE_NAME = "fraud_predictions"
 
