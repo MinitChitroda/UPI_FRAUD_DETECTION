@@ -1,7 +1,9 @@
 services:
-  - type: worker
-    name: fraud-detector-worker
-    env: python
-    plan: free
+  - type: web
+    name: upi-fraud-api
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python pipeline/data_fetcher.py
+    startCommand: uvicorn pipeline.main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: DATABASE_URI
+        value: postgresql://postgres.qfrowgrwklsndobrsirv:mW6CDGp0jKBHGFBV@aws-0-ap-south-1.pooler.supabase.com:6543/postgres
