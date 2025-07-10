@@ -44,13 +44,13 @@ def preprocess_data(df):
     return df[feature_cols]
 
 
-def fetch_existing_steps():
+def fetch_existing_txn_ids():
     with engine.connect() as conn:
-        result = conn.execute(text(f"SELECT step FROM {TABLE_NAME}"))
+        result = conn.execute(text(f"SELECT txn_id FROM {TABLE_NAME}"))
         return {row[0] for row in result}
 
 
-def fetch_and_predict(existing_steps):
+def fetch_and_predict(existing_txn_ids):
     response = requests.get(API_URL)
     if response.status_code != 200:
         logging.warning("API Error: %s", response.status_code)
@@ -62,9 +62,9 @@ def fetch_and_predict(existing_steps):
         return 0
 
     df_raw = pd.DataFrame(rows)
-    df_raw = df_raw[~df_raw["step"].isin(existing_steps)]
+    df_raw = df_raw[~df_raw["txn_id"].isin(existing_txn_ids)]
     if df_raw.empty:
-        logging.info("No new rows.")
+        logging.info("No new transactions.")
         return 0
 
     df_processed = preprocess_data(df_raw.copy())
@@ -81,10 +81,10 @@ def fetch_and_predict(existing_steps):
 
 # -------------------- Async Background Task --------------------
 async def pipeline_loop():
-    logging.info("🚀 Background fraud detection loop started.")
+    logging.info("Background fraud detection loop started.")
     while True:
         try:
-            steps_in_db = fetch_existing_steps()
+            steps_in_db = fetch_existing_txn_ids()
             fetch_and_predict(steps_in_db)
         except Exception as e:
             logging.error("Error: %s", e)
@@ -98,4 +98,4 @@ async def startup_event():
 
 @app.get("/")
 def root():
-    return {"status": "UPI Fraud Detection Pipeline running ✅"}
+    return {"status": "UPI Fraud Detection Pipeline running "}
