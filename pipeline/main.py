@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 import asyncio
-from pipeline.data_fetcher import pipeline_loop  # rename this if needed
+from data_fetcher import pipeline_loop
+#from pipeline.data_fetcher import pipeline_loop  # rename this if needed
 
 app = FastAPI()
 
@@ -54,7 +55,11 @@ async def root():
         <div class="container">
             <h1>🛡️ UPI Fraud Detection Pipeline</h1>
             <p class="lead">Monitoring real-time UPI transactions and flagging fraudulent activity with live alerts.</p>
-            <a href="/dashboard" class="btn btn-primary">📊 View Dashboard</a>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMxNmViNjgtM2Q4My00NDZjLTkxOWItODRiMTdmZGE0MTNkIiwidCI6IjVlOGZlMWVlLTg5NmYtNDdjZi1iMjFjLTUyMWMxMmJmODViYiJ9"
+               target="_blank" 
+               class="btn btn-primary">
+               📊 View Dashboard
+            </a>
         </div>
     </body>
     </html>
