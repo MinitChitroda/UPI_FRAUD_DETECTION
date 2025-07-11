@@ -55,7 +55,7 @@ async def root():
         <div class="container">
             <h1>🛡️ UPI Fraud Detection Pipeline</h1>
             <p class="lead">Monitoring real-time UPI transactions and flagging fraudulent activity with live alerts.</p>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiMWMxNmViNjgtM2Q4My00NDZjLTkxOWItODRiMTdmZGE0MTNkIiwidCI6IjVlOGZlMWVlLTg5NmYtNDdjZi1iMjFjLTUyMWMxMmJmODViYiJ9"
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNWM4OThmZWMtYTYyNy00NWRhLTg5ZjMtZGNjZDcyNGFjZjIxIiwidCI6IjVlOGZlMWVlLTg5NmYtNDdjZi1iMjFjLTUyMWMxMmJmODViYiJ9"
                target="_blank" 
                class="btn btn-primary">
                📊 View Dashboard
