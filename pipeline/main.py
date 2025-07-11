@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 import asyncio
-from data_fetcher import pipeline_loop
-#from pipeline.data_fetcher import pipeline_loop  # rename this if needed
+#from data_fetcher import pipeline_loop
+from pipeline.data_fetcher import pipeline_loop  # rename this if needed
 
 app = FastAPI()
 
