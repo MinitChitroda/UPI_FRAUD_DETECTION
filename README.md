@@ -66,3 +66,7 @@ Contributions are welcome!
 This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
 
 ---
+## 📄 Project Report
+
+You can view the complete project report here:  
+👉 [**View Full Report (PDF)**](https://drive.google.com/file/d/1jw39sm5XWZEM9zWsIFFtH2ZtK07zQdL7/view?usp=sharing)
