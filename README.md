@@ -7,11 +7,12 @@ This project integrates data processing, model training, backend automation, and
 
 ## 📁 Project Structure
 
-├── model/ # ML algorithms & training code
-├── pipeline/ # Email alerts & data handling
-├── client/ # Frontend UI built with React + Tailwind CSS
-└── api_server/ # Backend API server (managed separately)
+The project is organized into the following main directories:
 
+- **`model/`** – Contains all machine learning algorithms, model training scripts, and evaluation notebooks used for fraud detection.
+- **`pipeline/`** – Handles data ingestion, preprocessing, and automated email alerts triggered when suspicious transactions are detected.
+- **`client/`** – Frontend application built with React and Tailwind CSS, providing a real-time dashboard for monitoring transactions and fraud alerts.
+- **`api_server/`** – Backend API server built with FastAPI. It is hosted separately to ensure better modularity, scalability, and security.
 
 ---
 
